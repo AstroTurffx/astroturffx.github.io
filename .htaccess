@@ -1,3 +1,4 @@
+AllowOverride All
 DirectoryIndex home.html
 
 RewriteEngine on
