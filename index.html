@@ -3,6 +3,18 @@
     <head>
         <title>AstroTurffx</title>
         <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            .bg {
+                background-image: url("img_girl.jpg");
+                height: 100%; 
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
             ul {
                 list-style-type: none;
                 margin: 0;
@@ -10,11 +22,9 @@
                 overflow: hidden;
                 background-color: #333;
             }
-
             li {
                 float: left;
             }
-
             li a {
                 display: block;
                 color: white;
@@ -22,7 +32,6 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
-
             li a:hover {
                 background-color: #111;
             }
@@ -35,6 +44,6 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
           </ul> 
-        <img src="Astronaut.jpg">
+          <div class="bg"></div>
     </body>
 </html>
