@@ -59,36 +59,22 @@
                 padding: 5px;
                 overflow: hidden;
                 background-color: #333333;
+                width: 375px;
             }
             .column {
                 float: left;
                 width: 25%;
                 padding: 0 10px;
             }
-
-            /* Remove extra left and right margins, due to padding */
             .row {
                 margin: 0 auto;
                 max-width: 70%;
             }
-
-            /* Clear floats after the columns */
             .row:after {
                 content: "";
                 display: table;
                 clear: both;
             }
-
-            /* Responsive columns */
-            @media screen and (max-width: 600px) {
-                .column {
-                    width: 100%;
-                    display: block;
-                    margin-bottom: 20px;
-                }
-            }
-
-            /* Style the counter cards */
             .card {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 padding: 16px;
@@ -98,6 +84,12 @@
             }
             .card:hover {
                 box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+            }
+            @media screen and (max-width:1419px) {
+                .column{    
+                    float: none;
+                    width: 200px;
+                }
             }
         </style>
     </head>
@@ -162,51 +154,51 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/card1">
-                    <div class="card">
-                        <h3>Card 1</h3>
-                        <p>Description</p>
-                        <p>Skills used:</p>
-                        <p>Skill1<br>Skill2<br>Skill3</p>
-                    </div>
-                </a>
-            </div>
+            <div class="row">
+                <div class="column">
+                    <a style="display:block; color: black; text-decoration: none;" href="projects/card1">
+                        <div class="card">
+                            <h3>Card 1</h3>
+                            <p>Description</p>
+                            <p>Skills used:</p>
+                            <p>Skill1<br>Skill2<br>Skill3</p>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/card2">
-                    <div class="card">
-                        <h3>Card 2</h3>
-                        <p>Description</p>
-                        <p>Skills used:</p>
-                        <p>Skill1<br>Skill2<br>Skill3</p>
-                    </div>
-                </a>
+                <div class="column">
+                    <a style="display:block; color: black; text-decoration: none;" href="projects/card2">
+                        <div class="card">
+                            <h3>Card 2</h3>
+                            <p>Description</p>
+                            <p>Skills used:</p>
+                            <p>Skill1<br>Skill2<br>Skill3</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="column">
+                    <a style="display:block; color: black; text-decoration: none;" href="projects/card3">
+                        <div class="card">
+                            <h3>Card 3</h3>
+                            <p>Description</p>
+                            <p>Skills used:</p>
+                            <p>Skill1<br>Skill2<br>Skill3</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="column">
+                    <a style="display:block; color: black; text-decoration: none;" href="projects/card4">
+                        <div class="card">
+                            <h3>Card 4</h3>
+                            <p>Description</p>
+                            <p>Skills used:</p>
+                            <p>Skill1<br>Skill2<br>Skill3</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/card3">
-                    <div class="card">
-                        <h3>Card 3</h3>
-                        <p>Description</p>
-                        <p>Skills used:</p>
-                        <p>Skill1<br>Skill2<br>Skill3</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/card4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Description</p>
-                        <p>Skills used:</p>
-                        <p>Skill1<br>Skill2<br>Skill3</p>
-                    </div>
-                </a>
-            </div>
-        </div>
         <br>
         <div class="bg50" data-parallax="scroll" data-image-src="images/space1.jpg">
     </body>
