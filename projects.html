@@ -5,18 +5,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/parallax.min.js"></script>
         <style>
-            * {
-                box-sizing: border-box; 
-            }
             body {
                 margin:0;
                 height: 100%;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            .bg {
-                min-height: 720px;
+            .bg100 {
+                min-height: 100%;
                 width: 100%;
                 height: 100%;
+                display: table;
+                text-align: center;
+                background: transparent;
+            }
+            .bg50 {
+                min-height: 360px;
+                width: 100%;
+                height: 50%;
                 display: table;
                 text-align: center;
                 background: transparent;
@@ -27,7 +32,7 @@
                 color: white;
                 font-weight: normal;
             }
-            .bg > h1.title {
+            .bg100 > h1.title {
                 display: table-cell;
                 vertical-align: middle;
             }
@@ -86,6 +91,7 @@
                 padding: 16px;
                 text-align: center;
                 background-color: #e1e1e1;
+                height: 275px;
             }
             .card:hover {
                 box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
@@ -99,7 +105,7 @@
             <li class="navbaritem"><a href="contact">Contact</a></li>
             <li class="navbaritem"><a href="about">About</a></li>
         </ul>
-        <div class="bg" data-parallax="scroll" data-image-src="images/space2.jpg">
+        <div class="bg100" data-parallax="scroll" data-image-src="images/space2.jpg">
             <h1 class="title">My Projects</h1>
         </div>
         <br>
@@ -150,19 +156,7 @@
                 </a>
             </div>
         </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
-        </p>
+        <div class="bg50" data-parallax="scroll" data-image-src="images/space1.jpg">
     </body>
 </html>
 <!--

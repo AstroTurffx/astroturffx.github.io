@@ -25,15 +25,23 @@
             .middle{
                 text-align: center;      
             }
-            .bg {
-                min-height: 720px;
+            .bg100 {
+                min-height: 100%;
                 width: 100%;
                 height: 100%;
                 display: table;
                 text-align: center;
                 background: transparent;
             }
-            .bg > h1.title {
+            .bg50 {
+                min-height: 50%;
+                width: 100%;
+                height: 50%;
+                display: table;
+                text-align: center;
+                background: transparent;
+            }
+            .bg100 > h1.title {
                 display: table-cell;
                 vertical-align: middle;
             }
@@ -70,7 +78,7 @@
             <li class="navbaritem"><a href="contact">Contact</a></li>
             <li class="navbaritem"><a href="about">About</a></li>
         </ul>
-        <div class="bg" data-parallax="scroll" data-image-src="images/space1.jpg">
+        <div class="bg100" data-parallax="scroll" data-image-src="images/space1.jpg">
             <br>
             <h1 class="title">Hi, I'm Kevin.<br> I program alot of things</h1>
         </div>
@@ -78,5 +86,7 @@
         <p class="middle">
             My name is Kevin, also known as AstroTurffx.
         </p>
+        <div class="bg50" data-parallax="scroll" data-image-src="images/space2.jpg"></div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sequi animi quidem adipisci sint vero tempora quae. Facere tempora debitis at itaque neque vero, dolore voluptatum atque corrupti fugiat quo?</p>
     </body>
 </html>
