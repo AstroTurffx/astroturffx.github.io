@@ -5,6 +5,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/parallax.min.js"></script>
         <style>
+            * {
+                box-sizing: border-box; 
+            }
             body {
                 margin:0;
                 height: 100%;
@@ -49,24 +52,126 @@
                 overflow: hidden;
                 background-color: #333333;
             }
+            .column {
+                float: left;
+                width: 25%;
+                padding: 0 10px;
+            }
+
+            /* Remove extra left and right margins, due to padding */
+            .row {
+                margin: 0 auto;
+                max-width: 70%;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Responsive columns */
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+
+            /* Style the counter cards */
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 16px;
+                text-align: center;
+                background-color: #e1e1e1;
+            }
+            .card:hover {
+                box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+            }
         </style>
     </head>
     <body>
-    <ul class="navbar">
-        <li class="navbaritem"><a href="home">Home</a></li>
-        <li class="navbaritem"><a href="projects">Projects</a></li>
-        <li class="navbaritem"><a href="contact">Contact</a></li>
-        <li class="navbaritem"><a href="about">About</a></li>
-    </ul>
-    <div class="bg" data-parallax="scroll" data-image-src="images/space2.jpg">
-        <h1 class="title">My Projects</h1>
-    </div>
-    <ul>
-        <h3>Genaral Projects</h3>
-        <li>My website - HTML</li>
-        <li>Discord Bot - Node.js, APIs</li>
-        <li>Base64 Number System - AutoIt3</li>
-        <li>Roast Genarator - AutoIt3</li>
-    </ul>
+        <ul class="navbar">
+            <li class="navbaritem"><a href="home">Home</a></li>
+            <li class="navbaritem"><a href="projects">Projects</a></li>
+            <li class="navbaritem"><a href="contact">Contact</a></li>
+            <li class="navbaritem"><a href="about">About</a></li>
+        </ul>
+        <div class="bg" data-parallax="scroll" data-image-src="images/space2.jpg">
+            <h1 class="title">My Projects</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="column">
+                <a style="display:block; color: black; text-decoration: none;" href="projects/website">
+                    <div class="card">
+                        <h3>My Website</h3>
+                        <p>I created this website</p>
+                        <p>Skills used:</p>
+                        <p>HTML<br>CSS<br>JavaScript<br>Design<br>Git/GitHub</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column">
+                <a style="display:block; color: black; text-decoration: none;" href="projects/discordbots">
+                    <div class="card">
+                        <h3>Discord Bots</h3>
+                        <p>
+                            I created some Discord bots for people and for fun.
+                            Some of them where complex and consisted of Algorithms
+                            and lots of APIs
+                        </p>
+                        <p>Skills used:</p>
+                        <p>Node.js<br>APIs</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="column">
+                <a style="display:block; color: black; text-decoration: none;" href="projects/card3">
+                    <div class="card">
+                        <h3>Card 3</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="column">
+                <a style="display:block; color: black; text-decoration: none;" href="projects/card4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quasi ad est inventore magnam sapiente animi deleniti nostrum vel dicta ut, tempore, voluptas labore soluta fugiat, distinctio recusandae molestias ab.
+        </p>
     </body>
 </html>
+
+<!--
+<ul>
+    <h3>Genaral Projects</h3>
+    <li>My website - HTML</li>
+    <li>Discord Bot - Node.js, APIs</li>
+    <li>Base64 Number System - AutoIt3</li>
+    <li>Roast Genarator - AutoIt3</li>
+</ul>
+//-->
