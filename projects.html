@@ -61,23 +61,15 @@
                 background-color: #333333;
                 width: 375px;
             }
-            .column {
-                float: left;
-                width: 25%;
-                padding: 0 10px;
-            }
-            .row {
-                margin: 0 auto;
+            .cards{
                 max-width: 70%;
-            }
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
+                margin: 0 auto;
+                display: grid;
+                grid-gap: 1rem;
             }
             .card {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                padding: 16px;
+                padding: 1rem;
                 text-align: center;
                 background-color: #e1e1e1;
                 height: 280px;
@@ -85,11 +77,14 @@
             .card:hover {
                 box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
             }
-            @media screen and (max-width:1419px) {
-                .column{    
-                    float: none;
-                    width: 200px;
-                }
+            @media (min-width: 800px) {
+                .cards { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (min-width: 1100px) {
+                .cards { grid-template-columns: repeat(3, 1fr); }
+            }
+            @media (min-width: 1380px) {
+                .cards { grid-template-columns: repeat(4, 1fr); }
             }
         </style>
     </head>
@@ -104,101 +99,83 @@
             <h1 class="title">My Projects</h1>
         </div>
         <br>
-        <div class="row">
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/website">
-                    <div class="card">
-                        <h3>My Website</h3>
-                        <p>I created this website</p>
-                        <p>Skills used:</p>
-                        <p>CSS<br>Design<br>Git/GitHub<br>HTML<br>JavaScript</p>
-                    </div>
-                </a>
-            </div>
+        <div class="cards">
+            <a style="display:block; color: black; text-decoration: none;" href="projects/website">
+                <div class="card">
+                    <h3>My Website</h3>
+                    <p>I created this website</p>
+                    <p>Skills used:</p>
+                    <p>CSS<br>Design<br>Git/GitHub<br>HTML<br>JavaScript</p>
+                </div>
+            </a>
 
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/discordbots">
-                    <div class="card">
-                        <h3>Discord Bots</h3>
-                        <p>
-                            I created some Discord bots for people and for fun.
-                            Some of them where complex and consisted of Algorithms
-                            and lots of APIs
-                        </p>
-                        <p>Skills used:</p>
-                        <p>Algorithms<br>APIs<br>Node.js</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/base64">
-                    <div class="card">
-                        <h3>Base64 number system</h3>
-                        <p>Turns Base10 numbers into a Base64 number and back again</p>
-                        <p>Skills used:</p>
-                        <p>Algorithms<br>AutoIt3<br>Design</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="column">
-                <a style="display:block; color: black; text-decoration: none;" href="projects/roastgen">
-                    <div class="card">
-                        <h3>Roast Genarator</h3>
-                        <p>Randomly show roasts</p>
-                        <p>Skills used:</p>
-                        <p>AutoIt3<br>Design</p>
-                    </div>
-                </a>
-            </div>
+            <a style="display:block; color: black; text-decoration: none;" href="projects/discordbots">
+                <div class="card">
+                    <h3>Discord Bots</h3>
+                    <p>
+                        I created some Discord bots for people and for fun.
+                        Some of them where complex and consisted of Algorithms
+                        and lots of APIs
+                    </p>
+                    <p>Skills used:</p>
+                    <p>Algorithms<br>APIs<br>Node.js</p>
+                </div>
+            </a>
+        
+            <a style="display:block; color: black; text-decoration: none;" href="projects/base64">
+                <div class="card">
+                    <h3>Base64 number system</h3>
+                    <p>Turns Base10 numbers into a Base64 number and back again</p>
+                    <p>Skills used:</p>
+                    <p>Algorithms<br>AutoIt3<br>Design</p>
+                </div>
+            </a>
+        
+            <a style="display:block; color: black; text-decoration: none;" href="projects/roastgen">
+                <div class="card">
+                    <h3>Roast Genarator</h3>
+                    <p>Randomly show roasts</p>
+                    <p>Skills used:</p>
+                    <p>AutoIt3<br>Design</p>
+                </div>
+            </a>
+
+            <a style="display:block; color: black; text-decoration: none;" href="projects/card1">
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>Description</p>
+                    <p>Skills used:</p>
+                    <p>Skill1<br>Skill2<br>Skill3</p>
+                </div>
+            </a>
+
+            <a style="display:block; color: black; text-decoration: none;" href="projects/card2">
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>Description</p>
+                    <p>Skills used:</p>
+                    <p>Skill1<br>Skill2<br>Skill3</p>
+                </div>
+            </a>
+
+            <a style="display:block; color: black; text-decoration: none;" href="projects/card3">
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>Description</p>
+                    <p>Skills used:</p>
+                    <p>Skill1<br>Skill2<br>Skill3</p>
+                </div>
+            </a>
+
+            <a style="display:block; color: black; text-decoration: none;" href="projects/card4">
+                <div class="card">
+                    <h3>Card 4</h3>
+                    <p>Description</p>
+                    <p>Skills used:</p>
+                    <p>Skill1<br>Skill2<br>Skill3</p>
+                </div>
+            </a>
         </div>
-        <br>
-            <div class="row">
-                <div class="column">
-                    <a style="display:block; color: black; text-decoration: none;" href="projects/card1">
-                        <div class="card">
-                            <h3>Card 1</h3>
-                            <p>Description</p>
-                            <p>Skills used:</p>
-                            <p>Skill1<br>Skill2<br>Skill3</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="column">
-                    <a style="display:block; color: black; text-decoration: none;" href="projects/card2">
-                        <div class="card">
-                            <h3>Card 2</h3>
-                            <p>Description</p>
-                            <p>Skills used:</p>
-                            <p>Skill1<br>Skill2<br>Skill3</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="column">
-                    <a style="display:block; color: black; text-decoration: none;" href="projects/card3">
-                        <div class="card">
-                            <h3>Card 3</h3>
-                            <p>Description</p>
-                            <p>Skills used:</p>
-                            <p>Skill1<br>Skill2<br>Skill3</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="column">
-                    <a style="display:block; color: black; text-decoration: none;" href="projects/card4">
-                        <div class="card">
-                            <h3>Card 4</h3>
-                            <p>Description</p>
-                            <p>Skills used:</p>
-                            <p>Skill1<br>Skill2<br>Skill3</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
         <br>
         <div class="bg50" data-parallax="scroll" data-image-src="images/space1.jpg">
     </body>
