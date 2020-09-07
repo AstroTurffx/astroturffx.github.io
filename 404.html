@@ -24,7 +24,7 @@
                 display: table;
                 text-align: center;
 
-                background-image: url("/images/LostInSpace.jpg");
+                background-image: url("images/LostInSpace.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -67,5 +67,9 @@
         <div class="bg">
             <h1 class="text"><span class="bigger">Page not found - 404</span><br>Click <a href="/home">here</a> to go back to the home page</h1>
         </div>
+        <script>
+            var referrer = document.referrer;
+            console.log(referrer);
+        </script>
     </body>
 </html>
