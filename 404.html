@@ -68,14 +68,14 @@
                 <br>
                 Click <a href="/home">here</a> to go back to the home page.
                 <br>
-                <span class="GoBack">Click <a id="link">here</a> to go back to your last page</span>
+                <div class="GoBack">Click <a id="link">here</a> to go back to your last page</div>
             </h1>
         </div>
         <script>
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
             if (referrer === "") {
-                goBack.style.display = "none";style="position:relative; left:80px;"
+                goBack.style.display = "none";
             } else {
                 goBack.style.display = "block";
                 document.getElementById("link").setAttribute("href", referrer);
