@@ -79,16 +79,16 @@
             var request = new XMLHttpRequest();  
             request.open('GET', referrer, true);
             request.onreadystatechange = function(){
-                console.log("function call");
-                if (request.readyState === 4){
-                    if (request.status === 404) {
-                        goBack.style.display = "none";
-                    }
-                    else{
-                        goBack.style.display = "block";
-                        document.getElementById("link").setAttribute("href", referrer);
-                    } 
+                console.log(referrer);
+                if (request.status === 404) {
+                    console.log(1);
+                    goBack.style.display = "none";
                 }
+                else{
+                    console.log(2);
+                    goBack.style.display = "block";
+                    document.getElementById("link").setAttribute("href", referrer);
+                } 
             };
             request.send();
         </script>
