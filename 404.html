@@ -71,7 +71,7 @@
         <script>
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
-            if (referrer == null) {
+            if (referrer) {
                 console.log("hi");
                 goBack.style.display = "block";
                 document.getElementById("link").setAttribute("href",referrer);
