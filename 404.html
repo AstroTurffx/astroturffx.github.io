@@ -10,9 +10,7 @@
             h1{
                 font-size: 30px;
                 font-family: Arial, Helvetica, sans-serif;
-                text-align: center;
                 color: white;
-                line-height: 350px;
             }
             .bigger{
                 font-size: 50px;
@@ -24,7 +22,7 @@
                 display: table;
                 text-align: center;
 
-                background-image: url("/images/LostInSpace.jpg");
+                background-image: url("images/LostInSpace.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -55,9 +53,6 @@
                 background-color: #333333;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            #GoBack{
-                line-height: normal;
-            }
         </style>
     </head>
     <body>
@@ -69,21 +64,18 @@
         </ul>
         <div class="bg">
             <h1 class="text">
-                <span class="bigger">
-                    Page not found - 404
-                </span>
+                <span class="bigger">Page not found - 404</span>
                 <br>
                 Click <a href="/home">here</a> to go back to the home page.
-                <div id="GoBack">
-                    <h1>Click <a id="link">here</a> to go back to your last page</h1>
-                </div>
+                <br>
+                <span class="GoBack">Click <a id="link">here</a> to go back to your last page</span>
             </h1>
         </div>
         <script>
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
             if (referrer === "") {
-                goBack.style.display = "none";
+                goBack.style.display = "none";style="position:relative; left:80px;"
             } else {
                 goBack.style.display = "block";
                 document.getElementById("link").setAttribute("href", referrer);
