@@ -76,6 +76,16 @@
         <script>
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
+            var request = new XMLHttpRequest();  
+            request.open('GET', 'home', true);
+            request.onreadystatechange = function(){
+                if (request.readyState === 4){
+                    if (request.status === 404) {  
+                        console.log("Oh no, it does not exist!");
+                    }  
+                }
+            };
+            request.send();
             if (referrer === "") {
                 goBack.style.display = "none";
             } else {
