@@ -77,21 +77,20 @@
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
             var request = new XMLHttpRequest();  
-            request.open('GET', 'home', true);
+            request.open('GET', referrer, true);
             request.onreadystatechange = function(){
+                console.log("function call");
                 if (request.readyState === 4){
-                    if (request.status === 404) {  
-                        console.log("Oh no, it does not exist!");
-                    }  
+                    if (request.status === 404) {
+                        goBack.style.display = "none";
+                    }
+                    else{
+                        goBack.style.display = "block";
+                        document.getElementById("link").setAttribute("href", referrer);
+                    } 
                 }
             };
             request.send();
-            if (referrer === "") {
-                goBack.style.display = "none";
-            } else {
-                goBack.style.display = "block";
-                document.getElementById("link").setAttribute("href", referrer);
-            }
         </script>
     </body>
 </html>
