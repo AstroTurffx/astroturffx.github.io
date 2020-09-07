@@ -72,6 +72,7 @@
             var referrer = document.referrer;
             var goBack = document.getElementById("GoBack");
             if (referrer == null) {
+                console.log("hi");
                 goBack.style.display = "block";
                 document.getElementById("link").setAttribute("href",referrer);
             } else {
