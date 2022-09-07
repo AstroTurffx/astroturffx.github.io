@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+---
+
+<Base title="Hello!">
+	<main>
+		<div class="section">
+			<div class="landing-text">
+				<h3>Hi there, I'm</h3>
+				<h1 class="name">kevin.</h1>
+				<h2> &gt; FULL STACK DEVELOPER</h2>
+				<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
+				
+			</div>
+		</div>
+		<div class="section">
+			<h4>More Content</h4>
+		</div>
+
+	</main>
+
+</Base>
+
+<style>
+	:root {
+		--name-gradient: linear-gradient(0deg, #06c536, #2bca03);
+	}
+
+	h1, h2 {
+		margin: 0;
+	}
+
+	h4{
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+
+	main {
+		padding: 1em;
+	}
+
+	.section{
+		height: 100vh;
+	}
+
+	.landing-text{
+		margin: auto;
+  		width: 70%;
+		padding: 25vh 0;
+	}
+	
+	.name {
+		font-weight: 900;
+		background-image: var(--name-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+	
+	.blink {
+		animation: blink 1s step-start 0s infinite;
+		margin-top: 1rem;
+		font-weight: 600;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0.0;
+		}
+	}
+</style>
