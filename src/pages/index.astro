@@ -1,29 +1,30 @@
 ---
 import Base from '../layouts/Base.astro';
-import Card from '../components/Card.astro';
+import LandingPageSection from '../components/LandingPageSection.astro';
 ---
 
 <Base title="Hello!">
 	<main>
-		<div class="section">
-			<div class="landing-text">
-				<h3>Hi there, I'm</h3>
-				<h1 class="name">kevin.</h1>
-				<h2> &gt; FULL STACK DEVELOPER</h2>
-				<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
-				
-			</div>
-		</div>
-		<div class="section">
-			<div class="landing-text">
-				<div class="projects">
-					<h1 class="name">my stuff.</h1>
-					<h4>Take a look at all of my different projects. You can sort through them!</h4>
-					<button class="button">Check it out!</button>
-				</div>
-			</div>
-		</div>
+		<LandingPageSection>
+			<h3>Hi there, I'm</h3>
+			<h1>kevin.</h1>
+			<h2> &gt; FULL STACK DEVELOPER</h2>
+			<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
+		</LandingPageSection>
 
+		<LandingPageSection side="right">
+			<h3>Take a look at</h3>
+			<h1>my projects.</h1>
+			<h4>Have a look at my programming journey. Play around with the source code or compiled versions!</h4>
+			<button class="button">Check it out!</button>
+		</LandingPageSection>
+
+		<LandingPageSection>
+			<h3>Why don't you get in</h3>
+			<h1>contact.</h1>
+			<h4>If you would like to work with me; give a suggestion or are interested about one of my projects; feel free to get in touch!</h4>
+			<button class="button">Contact me!</button>
+		</LandingPageSection>
 	</main>
 
 </Base>
@@ -31,6 +32,17 @@ import Card from '../components/Card.astro';
 <style>
 	:root {
 		--name-gradient: linear-gradient(0deg, var(--color-highlight1), var(--color-highlight2));
+	}
+
+	h1 {
+		font-weight: 900;
+		background-image: var(--name-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
 	}
 
 	h1, h2 {
@@ -75,31 +87,6 @@ import Card from '../components/Card.astro';
 		background-image: var(--name-gradient);
 	}
 
-	.projects{
-		text-align: right;
-	}
-
-	.section{
-		display:block;
-		height: 75vh;
-	}
-
-	.landing-text{
-		margin: auto;
-  		width: 70%;
-		padding: 25vh 0;
-	}
-	
-	.name {
-		font-weight: 900;
-		background-image: var(--name-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
 	
 	.blink {
 		animation: blink 1s step-start 0s infinite;
