@@ -1,0 +1,36 @@
+---
+
+---
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry.target.classList)
+                if(entry.isIntersecting){
+                    entry.target.classList.add("sa-show");
+                    entry.target.classList.remove("sa-hidden");
+                }
+                else{
+                    entry.target.classList.add("sa-hidden");
+                    entry.target.classList.remove("sa-show");
+                }
+            })
+        })
+
+        const sa_hidden = document.querySelectorAll(".sa-hidden")
+        sa_hidden.forEach((el) => observer.observe(el))
+        console.log("scroll animation observer started")
+    })
+</script>
+
+<style is:global>
+    .sa-show{
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    .sa-hidden{
+        opacity: 0;
+    }
+</style>

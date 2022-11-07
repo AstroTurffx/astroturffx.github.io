@@ -19,6 +19,8 @@ const { side="left" } = Astro.props
 
 <div class="section">
     <div class="landing-text" style={`text-align: ${side}`}>
-        <slot/>
+		<div class="sa-hidden">
+        	<slot/>
+		</div>
     </div>
 </div>

@@ -1,0 +1,68 @@
+---
+import Base from "./Base.astro";
+const { title, tags } = Astro.props.frontmatter;
+
+
+---
+
+<Base title={`Projects | ${title}`}>
+    <div class="proj-header">
+        <h2 class="title"><span class="hl-title">Projects</span> | <span class="hl-title">{title}</span></h2>
+    </div>
+    <div class="content">
+        <div>
+            <slot/>
+        </div>
+        <div class="sidebar">
+            <div class="tags">
+                {tags.map((tag) => (
+                    <p class="tag">{tag}</p>
+                ))}
+            </div>
+        </div>
+    </div>
+</Base>
+
+<style>
+    .proj-header {
+        width: 100%;
+
+        margin-bottom: 1rem;
+        padding: 2rem;
+
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+		border-color: var(--color-bg2);
+    }
+    
+    .content{
+        margin: 2rem;
+    }
+
+    .title{
+        margin: 0;
+    }
+
+    .sidebar{
+        float: right;
+        width: 25vw;
+    }
+
+    .tag{
+        border-radius: 2rem;
+        border-color: blue;
+        display: inline-block;
+        margin: 1rem;
+    }
+
+    .tags{
+
+    }
+
+    a {
+        text-decoration: none;
+        border-style: solid;
+		border-color: var(--color-bg2);
+    }
+</style>
+

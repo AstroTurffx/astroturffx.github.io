@@ -7,44 +7,28 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 	<main>
 		<LandingPageSection>
 			<h3>Hi there, I'm</h3>
-			<h1>kevin.</h1>
+			<h1 class="hl-title">kevin.</h1>
 			<h2> &gt; FULL STACK DEVELOPER</h2>
 			<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
 		</LandingPageSection>
 
 		<LandingPageSection side="right">
 			<h3>Take a look at</h3>
-			<h1>my projects.</h1>
+			<h1 class="hl-title">my projects.</h1>
 			<h4>Have a look at my programming journey. Play around with the source code or compiled versions!</h4>
 			<button class="button">Check it out!</button>
 		</LandingPageSection>
 
 		<LandingPageSection>
 			<h3>Why don't you get in</h3>
-			<h1>contact.</h1>
+			<h1 class="hl-title">contact.</h1>
 			<h4>If you would like to work with me; give a suggestion or are interested about one of my projects; feel free to get in touch!</h4>
 			<button class="button">Contact me!</button>
 		</LandingPageSection>
 	</main>
-
 </Base>
 
 <style>
-	:root {
-		--name-gradient: linear-gradient(0deg, var(--color-highlight1), var(--color-highlight2));
-	}
-
-	h1 {
-		font-weight: 900;
-		background-image: var(--name-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
 	h1, h2 {
 		margin: 0;
 	}
@@ -61,7 +45,7 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 	.button{
 		width: 12rem;
 		height: 3rem;
-		margin: 1rem;
+		margin: 1rem 0;
 
   		display: inline-block;
 		border-radius: 2rem;
@@ -74,20 +58,12 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		background-color: transparent;
 
 		color: var(--color-bg1);
-		background-image: var(--name-gradient);
+		background-image: var(--hl-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		animation: pulse 4s ease-in-out infinite;
 	}
 
-	.break{
-		margin: auto;
-		width: 10%;
-		height: 1px;
-		background-image: var(--name-gradient);
-	}
-
-	
 	.blink {
 		animation: blink 1s step-start 0s infinite;
 		margin-top: 1rem;
