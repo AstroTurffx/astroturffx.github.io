@@ -1,39 +1,44 @@
 ---
 import Base from "./Base.astro";
-const { title, tags, projectinfo } = Astro.props.frontmatter;
+
+export interface Props {
+	title: string;
+    tags: string[];
+    projectinfo: string[];
+
+}
+const { title, tags, projectinfo } = Astro.props;
 ---
 
 <Base title={`Projects | ${title}`}>
     <div class="proj-header">
         <h2 class="title"><span class="hl-title">Projects</span> | <span class="hl-title">{title}</span></h2>
     </div>
-    <div>
-        <div class="sidebar">
-            <span class="sidebar-title">Tags</span>
-            <div class="sidebar-break"></div>
-            <div class="sidebar-content">
-                <div class="tags">
-                    {tags.map((tag: string) => (
-                        <p class="tag">{tag}</p>
+    <div id="sidebar">
+        <span class="sidebar-title">Tags</span>
+        <div class="sidebar-break"></div>
+        <div class="sidebar-content">
+            <div class="tags">
+                {tags.map((tag: string) => (
+                    <p class="tag">{tag}</p>
+                ))}
+            </div>
+        </div>
+        <div class="sidebar-break"></div>
+        <span class="sidebar-title">Project Info</span>
+        <div class="sidebar-content">
+            <table class="project-info ">
+                    {projectinfo.map((thing: string) => (
+                        <tr class="pi-table-item">
+                            <td class="pi-table-item">{thing.split(':')[0]}</td>
+                            <td class="pi-table-item">{thing.split(':')[1]}</td>
+                        </tr>
                     ))}
-                </div>
-            </div>
-            <div class="sidebar-break"></div>
-            <span class="sidebar-title">Project Info</span>
-            <div class="sidebar-content">
-                <table class="project-info ">
-                        {projectinfo.map((thing: string) => (
-                            <tr class="pi-table-item">
-                                <td class="pi-table-item">{thing.split(':')[0]}</td>
-                                <td class="pi-table-item">{thing.split(':')[1]}</td>
-                            </tr>
-                        ))}
-                </table>
-            </div>
+            </table>
         </div>
-        <div class="content">
-            <slot/>
-        </div>
+    </div>
+    <div class="content">
+        <slot/>
     </div>
 </Base>
 
@@ -67,7 +72,7 @@ const { title, tags, projectinfo } = Astro.props.frontmatter;
     
     .content{
         margin: 2rem;
-        width: 75vw;
+        width: 80vw;
         
         font-size: 0.9rem;
     }
@@ -76,9 +81,11 @@ const { title, tags, projectinfo } = Astro.props.frontmatter;
         margin: 0;
     }
 
-    .sidebar{
+    #sidebar{
+        display: block;
         float: right;
         width: 15vw;
+        height: 100%;
         padding: 0 0.5rem;
 
         border-color: rgb(29, 29, 29);
