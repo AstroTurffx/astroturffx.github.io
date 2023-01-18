@@ -12,29 +12,70 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 			<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
 		</LandingPageSection>
 
+		<LandingPageSection>
+			<div class="abt-me">
+				<div class="abt-me-bruh">
+					<h2 class="hl-title">#about me</h2>
+					<p class="abt-me-p">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis nisl sit amet
+						justo facilisis tristique. Nunc lobortis mi nulla, a gravida orci sollicitudin et.
+						Donec et mi auctor, aliquet nibh at, feugiat ex. Aenean at ultrices elit. Quisque
+						ut venenatis sapien, eget viverra leo. Nulla blandit felis sit amet elit porta, a
+						varius ante faucibus. Sed rhoncus magna urna, at aliquet quam euismod ac. Fusce
+						vel suscipit arcu. Nullam vel sollicitudin ligula. Mauris feugiat nisl non nisl
+						aliquet auctor. Maecenas vulputate diam lectus, sit amet laoreet augue condimentum
+						at. In posuere lobortis libero, eu posuere leo pretium sed. Sed velit ipsum, blandit
+						id iaculis vitae, tristique id tellus. Aliquam finibus odio et cursus volutpat.
+						<br/>
+						Nam hendrerit, est sed hendrerit placerat, nulla magna tincidunt arcu, finibusbibendum
+						lectus arcu id lacus. Cras ornare porta neque, eget hendrerit nisl malesuada non.
+						In semper vel ex eget pellentesque. Vestibulum varius euismod arcu. Phasellus quis
+						vehicula massa. Integer vestibulum turpis tempor, mattis urna non, accumsan dui.
+						Proin efficitur massa quis porta pretium. Orci varius natoque penatibus et magnis
+						dis parturient montes, nascetur ridiculus mus.
+						<br/>
+						Maecenas porta, leo non eleifend
+						scelerisque, nulla libero congue justo, id lobortis ex nibh id nibh. In luctus
+						sapien a purus tempus volutpat. In scelerisque lobortis consequat. Duis porttitor
+						leo lectus, et laoreet ante commodo et. Duis molestie dui ac malesuada rhoncus.
+						Etiam ante dui, suscipit vitae diam eu, rutrum vulputate eros. Quisque laoreet
+						felis eget nisi laoreet, sit amet consequat felis dapibus. Cras in eleifend orci,
+						in tempus nisi. In hac habitasse platea dictumst.
+					</p>
+				</div>
+				<div class="squares-svg-container">
+					<svg class="squares-svg" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect class="bg-squares-svg" x="37.5" y="37.5" width="310.5" height="310.5" stroke="#0DC62D"/>
+						<rect width="311" height="311" fill="#1E1E1E"/>
+					</svg>
+				</div>
+			</div>
+		</LandingPageSection>
+
 		<LandingPageSection side="right">
 			<h3>Take a look at</h3>
 			<h1 class="hl-title">my projects.</h1>
 			<h4>Have a look at my programming journey. Play around with the source code or compiled versions!</h4>
-			<button class="button">Check it out!</button>
+			<button class="button"><span>Check it out!</span></button>
 		</LandingPageSection>
 
 		<LandingPageSection>
 			<h3>Why don't you get in</h3>
 			<h1 class="hl-title">contact.</h1>
 			<h4>If you would like to work with me; give a suggestion or are interested about one of my projects; feel free to get in touch!</h4>
-			<button class="button">Contact me!</button>
+			<button class="button"><span>Contact me!</span></button>
 		</LandingPageSection>
 	</main>
 </Base>
 
 <style>
-	h1, h2 {
+	h1, h2, h3 {
 		margin: 0;
 	}
 
 	h4{
 		font-weight: 300;
+		margin-top: .75rem;
 		margin-bottom: 0;
 	}
 
@@ -42,7 +83,49 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		padding: 1em;
 	}
 
+	.abt-me-bruh{
+		width:45%;
+	}
+	.abt-me{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.abt-me-p{
+		font-weight: 350;
+		letter-spacing: 0px;
+		font-size: 0.8rem;
+  		line-height: 1.2rem;
+		margin: 0;
+	}
+
+	.bg-squares-svg{
+		animation: pulse 5s alternate ease-out infinite;
+		filter: drop-shadow(0px 0px 10px var(--color-highlight1));
+	}
+	
+	@keyframes pulse {
+		from {
+			filter: drop-shadow(0px 0px 5px var(--color-highlight1));
+			stroke: var(--color-highlight1);
+		}
+
+		to {
+			filter: drop-shadow(0px 0px 15px var(--color-highlight1));
+		}
+	}
+
+	.squares-svg{
+		float: right;
+	}
+
+	.squares-svg-container {
+		width: 45%;
+	}
+
 	.button{
+  		cursor: pointer;
+		
 		width: 12rem;
 		height: 3rem;
 		margin: 1rem 0;
@@ -57,11 +140,40 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 
 		background-color: transparent;
 
-		color: var(--color-bg1);
+  		transition: all 0.5s;
+	}
+
+	.button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+		
 		background-image: var(--hl-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		animation: pulse 4s ease-in-out infinite;
+	}
+
+	.button span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+
+		background-image: var(--hl-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.button:hover span {
+		padding-right: 25px;
+	}
+
+	.button:hover span:after {
+		opacity: 1;
+		right: 0;
 	}
 
 	.blink {

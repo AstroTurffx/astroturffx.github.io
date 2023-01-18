@@ -6,7 +6,7 @@
     window.addEventListener('DOMContentLoaded', (event) => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry.target.classList)
+                // console.log(entry.target.classList)
                 if(entry.isIntersecting){
                     entry.target.classList.add("sa-show");
                     entry.target.classList.remove("sa-hidden");
@@ -27,15 +27,17 @@
 <style is:global>
     .sa-show{
         opacity: 1;
-		letter-spacing: 0px;
         transition: all 1s;
+        transform: scale(1);
         position: relative;
         bottom: 20px;
+		letter-spacing: 0px;
     }
 
     .sa-hidden{
-        opacity: 0;
-        letter-spacing: -0.4px;
+        opacity: 0.1;
         bottom: 0px;
+        transform: scale(0.95);
+		letter-spacing: -.2px;
     }
 </style>
