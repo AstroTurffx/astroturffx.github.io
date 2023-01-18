@@ -15,7 +15,7 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		<LandingPageSection>
 			<div class="abt-me">
 				<div class="abt-me-bruh">
-					<h2 class="hl-title">#about me</h2>
+					<h2 class="abt-me-title hl-title">#about me</h2>
 					<p class="abt-me-p">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis nisl sit amet
 						justo facilisis tristique. Nunc lobortis mi nulla, a gravida orci sollicitudin et.
@@ -99,6 +99,10 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		margin: 0;
 	}
 
+	.abt-me-title{
+		margin-bottom: 0.75rem;
+	}
+
 	.bg-squares-svg{
 		animation: pulse 5s alternate ease-out infinite;
 		filter: drop-shadow(0px 0px 10px var(--color-highlight1));
@@ -139,8 +143,18 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		font-size: var(--font-size-base);
 
 		background-color: transparent;
+		
+		filter: drop-shadow(0px 0px 5px #06c53633);
 
   		transition: all 0.5s;
+	}
+
+	.button:hover{
+		filter: drop-shadow(0px 0px 7px #06c53671);
+	}
+
+	.button:active{
+		filter: drop-shadow(0px 0px 20px var(--color-highlight1));
 	}
 
 	.button span {
@@ -148,7 +162,7 @@ import LandingPageSection from '../components/LandingPageSection.astro';
 		display: inline-block;
 		position: relative;
 		transition: 0.5s;
-		
+
 		background-image: var(--hl-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
