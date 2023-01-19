@@ -1,23 +1,45 @@
 ---
-const { side="left", extended=false } = Astro.props
+const { side="left", extended=false, responsiveness=false } = Astro.props
+const height = extended ? 100 : 75;
+
+const list = [
+	"section",
+	{
+		responsiveness,
+		extended, 
+		right: (side!="left")
+	}
+]
 ---
 
 <style>
-	.section{
+	.section {
         display: flex;
-
-		
         align-items: center;
+		height: 75vh;
+	}
+
+	.responsiveness{
+		height: calc(100%);
+		margin-bottom: 15vh;
+	}
+
+	.extended{
+		height: 100vh;
 	}
 
 	.landing-text{
 		margin: auto;
   		width: 70%;
 	}
+
+	.right{
+		text-align: right;
+	}
 </style>
 
-<div class="section" style={`height: ${extended?100:75}vh`}>
-    <div class="landing-text" style={`text-align: ${side}`}>
+<div class:list={list}>
+    <div class="landing-text">
 		<div class="sa-hidden">
         	<slot/>
 		</div>
