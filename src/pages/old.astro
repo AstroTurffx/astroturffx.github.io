@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import LandingPageSection from '../components/homepage/PageSection.astro';
+import AboutMe from '../components/homepage//AboutMe.astro';
+---
+
+<Base title="Hello!">
+	<main>
+		<LandingPageSection extended={true}>
+			<h3>Hi there, I'm</h3>
+			<h1 class="hl-title">kevin.</h1>
+			<h2> &gt; FULL STACK DEVELOPER</h2>
+			<h4>I'm a self taught programmer with experience in many fields.<span class="blink">|</span></h4>
+		</LandingPageSection>
+
+		<AboutMe/>
+
+		<LandingPageSection side="right">
+			<h3>Take a look at</h3>
+			<h1 class="hl-title">my projects.</h1>
+			<h4>Have a look at my programming journey. Play around with the source code or compiled versions!</h4>
+			<button class="button"><span>Check it out!</span></button>
+		</LandingPageSection>
+
+		<LandingPageSection>
+			<h3>Why don't you get in</h3>
+			<h1 class="hl-title">contact.</h1>
+			<h4>If you would like to work with me; give a suggestion or are interested about one of my projects; feel free to get in touch!</h4>
+			<button class="button"><span>Contact me!</span></button>
+		</LandingPageSection>
+	</main>
+</Base>
+
+<style>
+	h1, h2, h3 {
+		margin: 0;
+	}
+
+	h4{
+		font-weight: 300;
+		margin-top: .75rem;
+		margin-bottom: 0;
+	}
+
+	main {
+		padding: 1em;
+	}
+
+	.button{
+  		cursor: pointer;
+		
+		width: 12rem;
+		height: 3rem;
+		margin: 1rem 0;
+
+  		display: inline-block;
+		border-radius: 2rem;
+		border-color: var(--color-highlight1);
+
+  		text-align: center;
+		font-weight: 700;
+		font-size: var(--font-size-base);
+
+		background-color: transparent;
+		
+		filter: drop-shadow(0px 0px 5px #06c53633);
+
+  		transition: all 0.5s;
+	}
+
+	.button:hover{
+		filter: drop-shadow(0px 0px 7px #06c53671);
+	}
+
+	.button:active{
+		filter: drop-shadow(0px 0px 20px var(--color-highlight1));
+	}
+
+	.button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+
+		background-image: var(--hl-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.button span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+
+		background-image: var(--hl-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.button:hover span {
+		padding-right: 25px;
+	}
+
+	.button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+
+	.blink {
+		animation: blink 1s step-start 0s infinite;
+		margin-top: 1rem;
+		font-weight: 600;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0.0;
+		}
+	}
+</style>

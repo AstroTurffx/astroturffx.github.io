@@ -1,0 +1,65 @@
+---
+
+---
+
+<section>
+    <img src="parallax/peak0.svg" class="parallax">
+    <img src="parallax/wave0.svg" class="parallax">
+    <img src="parallax/peak1.svg" class="parallax">
+    <img src="parallax/wave1.svg" class="parallax">
+    <img src="parallax/peak2.svg" class="parallax">
+	<div id="slot"><slot/></div>
+    <img src="parallax/wave2.svg" class="parallax">
+    <img src="parallax/peak3.svg" class="parallax">
+    <img src="parallax/wave3.svg" class="parallax">
+    <img src="parallax/peak4.svg" class="parallax">
+    <img src="parallax/wave4.svg" class="parallax">
+</section>
+
+<script>
+	let images = document.getElementsByClassName("parallax");
+	let slot = document.getElementById("slot")
+	
+	window.addEventListener('scroll', () => {
+		let value = window.scrollY;
+
+		slot.style.top = 0.6 * value + "px";
+
+		for (let i = 0; i < images.length; i++) {
+			const element = images.item(i);
+			element.style.top = 0.075 * (images.length - i) * value + "px";
+		}
+	});
+</script>
+
+<style>
+	section {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		pointer-events: none;
+	}
+	#slot {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>

@@ -1,0 +1,57 @@
+---
+import ProjectBlock from "../../components/Projects/ProjectBlock.astro";
+import Base from "../../layouts/Base.astro";
+
+---
+
+
+<Base title="Projects">
+    <div class="header">
+        <h2 class="hl-title title">Project Finder</h2>
+    </div>
+    <div class="content">
+        <div class="filters">
+
+        </div>
+        <div class="projects">
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+            <ProjectBlock title="SQRD Mod" tags={["Java", "Brain"]}> big chinky men </ProjectBlock>
+        </div>
+    </div>
+</Base>
+
+<style>
+    
+
+    .header {
+        margin-bottom: 1rem;
+        padding: 2rem;
+
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+		border-color: var(--color-bg2);
+    }
+    .title{
+        margin: 0;
+    }
+    .content  {
+        width: 90%;
+        margin: auto;
+        padding-top: 1rem;
+    }
+    .projects{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center
+    }
+
+</style>
