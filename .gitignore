@@ -22,3 +22,6 @@ pnpm-debug.log*
 # ide files
 .vscode/
 .idea/
+
+# Archived files
+old/
