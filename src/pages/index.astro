@@ -23,89 +23,8 @@ import TitleSection from "../components/homepage/TitleSection.astro";
 				<li><a href="#"><i class="fa-lg fa-solid fa-bars"></i></a></li>
 			</ul>
 		</header>
-		<TitleSection>
-			<h1 id="title">Hey, I'm <span id="magic">Kevin</span></h1>
-		</TitleSection>
-		<section class="content">
-			<h1>Temporary</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-				Accusantium corporis unde impedit tempore ab nihil placeat,
-				dignissimos magnam enim sint error fugit aut doloremque magni
-				consequuntur, quidem, quia veniam doloribus reiciendis dolorem
-				aliquid laborum sunt iste fuga! Officiis explicabo natus quod
-				possimus, et fugiat magnam dignissimos nemo eum, iste eius
-				repellat earum nulla nam a modi ipsam neque quo? Hic itaque,
-				odio perspiciatis nesciunt porro aliquam rem sapiente?
-				Repudiandae nihil cum nam labore quisquam, recusandae corrupti
-				rem suscipit alias. Explicabo aperiam repudiandae, cumque enim
-				nesciunt quidem illum debitis, ex animi, quas pariatur
-				dignissimos placeat recusandae aliquam? Molestiae, eaque nemo?
-				Libero, quia, consequatur in magnam numquam quae sed nobis
-				aliquam pariatur reprehenderit assumenda velit impedit fugit
-				quam natus maxime eligendi officiis, enim deserunt blanditiis
-				eum cupiditate ut accusantium doloremque? Assumenda et dolorum
-				esse impedit quasi veniam quaerat fugiat, suscipit debitis sequi
-				nesciunt numquam aspernatur. Dolorum dolor ad enim velit animi,
-				qui voluptas voluptates provident sequi! Illo culpa possimus
-				dignissimos eveniet vel! Eius inventore deserunt quod commodi
-				architecto, ipsum voluptatum, doloremque maiores fugiat nesciunt
-				culpa ipsa rerum? Velit voluptate repudiandae cum temporibus,
-				numquam voluptatum, incidunt asperiores nulla magnam vero
-				nostrum ad quidem voluptas modi quas minima nisi at!
-				<br>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-				Accusantium corporis unde impedit tempore ab nihil placeat,
-				dignissimos magnam enim sint error fugit aut doloremque magni
-				consequuntur, quidem, quia veniam doloribus reiciendis dolorem
-				aliquid laborum sunt iste fuga! Officiis explicabo natus quod
-				possimus, et fugiat magnam dignissimos nemo eum, iste eius
-				repellat earum nulla nam a modi ipsam neque quo? Hic itaque,
-				odio perspiciatis nesciunt porro aliquam rem sapiente?
-				Repudiandae nihil cum nam labore quisquam, recusandae corrupti
-				rem suscipit alias. Explicabo aperiam repudiandae, cumque enim
-				nesciunt quidem illum debitis, ex animi, quas pariatur
-				dignissimos placeat recusandae aliquam? Molestiae, eaque nemo?
-				Libero, quia, consequatur in magnam numquam quae sed nobis
-				aliquam pariatur reprehenderit assumenda velit impedit fugit
-				quam natus maxime eligendi officiis, enim deserunt blanditiis
-				eum cupiditate ut accusantium doloremque? Assumenda et dolorum
-				esse impedit quasi veniam quaerat fugiat, suscipit debitis sequi
-				nesciunt numquam aspernatur. Dolorum dolor ad enim velit animi,
-				qui voluptas voluptates provident sequi! Illo culpa possimus
-				dignissimos eveniet vel! Eius inventore deserunt quod commodi
-				architecto, ipsum voluptatum, doloremque maiores fugiat nesciunt
-				culpa ipsa rerum? Velit voluptate repudiandae cum temporibus,
-				numquam voluptatum, incidunt asperiores nulla magnam vero
-				nostrum ad quidem voluptas modi quas minima nisi at!
-				<br>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-				Accusantium corporis unde impedit tempore ab nihil placeat,
-				dignissimos magnam enim sint error fugit aut doloremque magni
-				consequuntur, quidem, quia veniam doloribus reiciendis dolorem
-				aliquid laborum sunt iste fuga! Officiis explicabo natus quod
-				possimus, et fugiat magnam dignissimos nemo eum, iste eius
-				repellat earum nulla nam a modi ipsam neque quo? Hic itaque,
-				odio perspiciatis nesciunt porro aliquam rem sapiente?
-				Repudiandae nihil cum nam labore quisquam, recusandae corrupti
-				rem suscipit alias. Explicabo aperiam repudiandae, cumque enim
-				nesciunt quidem illum debitis, ex animi, quas pariatur
-				dignissimos placeat recusandae aliquam? Molestiae, eaque nemo?
-				Libero, quia, consequatur in magnam numquam quae sed nobis
-				aliquam pariatur reprehenderit assumenda velit impedit fugit
-				quam natus maxime eligendi officiis, enim deserunt blanditiis
-				eum cupiditate ut accusantium doloremque? Assumenda et dolorum
-				esse impedit quasi veniam quaerat fugiat, suscipit debitis sequi
-				nesciunt numquam aspernatur. Dolorum dolor ad enim velit animi,
-				qui voluptas voluptates provident sequi! Illo culpa possimus
-				dignissimos eveniet vel! Eius inventore deserunt quod commodi
-				architecto, ipsum voluptatum, doloremque maiores fugiat nesciunt
-				culpa ipsa rerum? Velit voluptate repudiandae cum temporibus,
-				numquam voluptatum, incidunt asperiores nulla magnam vero
-				nostrum ad quidem voluptas modi quas minima nisi at!
-				<br>
-			</p>
-		</section>
+		<TitleSection/>
+		
 	</body>
 </html>
 
@@ -243,45 +162,5 @@ import TitleSection from "../components/homepage/TitleSection.astro";
 		position: relative;
 		background-color: #f700ff;
 		padding: 2rem;
-	}
-	#title{
-		position: absolute;
-		font-size: var(--font-size-xl);
-	}
-	#magic {
-  		position: relative;
-
-		background: white;
-		transition: background 0.25s;
-
-		background-size: 200%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	#title:hover > #magic {
-		animation: background-pan 3s linear infinite;
-
-		background: var(--color-primary);
-
-		background-size: 200%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	#title::before {
-		--value: 0%;
-
-		content: '';
-		position: absolute;
-		bottom: -0.5rem;
-		right: calc(50% - calc(var(--value) / 2));
-
-		transition: 0.25s;
-		background:var(--color-primary);
-		height: 5px;
-		width: var(--value);
-	}
-	#title:hover::before {
-		--value: 100%;
-		transition: 0.25s;
 	}
 </style>
