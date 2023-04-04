@@ -1,5 +1,5 @@
 ---
-import WavesAndPeaks from "../components/parallax/WavesAndPeaks.astro";
+import TitleParallax from "../components/parallax/TitleParallax.astro";
 ---
 
 <!DOCTYPE html>
@@ -23,9 +23,9 @@ import WavesAndPeaks from "../components/parallax/WavesAndPeaks.astro";
 				<li><a href="#"><i class="fa-lg fa-solid fa-bars"></i></a></li>
 			</ul>
 		</header>
-		<WavesAndPeaks>
+		<TitleParallax>
 			<h1 id="title">Hey, I'm <span id="magic">Kevin</span></h1>
-		</WavesAndPeaks>
+		</TitleParallax>
 		<section class="content">
 			<h1>Temporary</h1>
 			<p>
@@ -145,19 +145,7 @@ import WavesAndPeaks from "../components/parallax/WavesAndPeaks.astro";
 	#ff218c
  -->
 
-<style>
-	@font-face {
-		font-family: "futura_m";
-		src: url("/futura.ttf");
-	}
-	@keyframes background-pan{
-		from {
-			background-position: 0% center;
-		}
-		to{
-			background-position: 200% center;
-		}
-	}
+ <style is:global>
 	* {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -176,11 +164,33 @@ import WavesAndPeaks from "../components/parallax/WavesAndPeaks.astro";
 			var(--color-highlight2)
 		);
 	}
+</style>
+<style>
+	@font-face {
+		font-family: "futura_m";
+		src: url("/futura.ttf");
+	}
+	@font-face {
+		font-family: "futura_l";
+		src: url("/futura_light.ttf");
+	}
+	@keyframes background-pan{
+		from {
+			background-position: 0% center;
+		}
+		to{
+			background-position: 200% center;
+		}
+	}
+	
 	html {
 		font-family: "futura_m";
 		font-size: var(--font-size-base);
 		color: var(--color-text);
 		scroll-behavior: smooth;
+	}
+	html::-webkit-scrollbar{
+		display: none;
 	}
 	body {
 		min-height: 100vh;
