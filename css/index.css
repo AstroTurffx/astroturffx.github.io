@@ -1,0 +1,161 @@
+/* Starting stuff */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        125deg,
+        var(--cl-bg1),
+        var(--cl-bg2)
+    );
+    margin: 0;
+}
+
+/* Header stuff */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - min(15vw, 160px));
+    padding: 20px min(7.5vw, 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-weight: 700;
+    font-size: var(--fs-lg);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+a {
+    text-decoration: none;
+    color: var(--cl-text);
+}
+i {
+    transform: scale(1);
+    transition: 0.25s;
+}
+i:hover {
+    transform: scale(1.2);
+    color: var(--cl-1);
+}
+
+/* Title section */
+#ts-scroll-text {
+    z-index: 6;
+    position: absolute;
+    left: 50%;
+    bottom: 5vh;
+    font-family: "futura_l";
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#ts {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ts-parallax, .ts-blobs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.ts-blobs{
+    object-fit: fill;
+    top: 125vh;
+    filter: drop-shadow(0 0 16px #aa52b4);
+}
+
+#ts-slot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ts-title{
+    position: absolute;
+    font-size: var(--fs-xl);
+}
+#ts-magic {
+    position: relative;
+
+    background: white;
+    transition: background 0.25s;
+
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#ts-title:hover > #ts-magic {
+    animation: background-pan 3s linear infinite;
+
+    background: var(--cl-1);
+
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#ts-title::before {
+    --value: 0%;
+
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: calc(50% - calc(var(--value) / 2));
+
+    transition: 0.25s;
+    background:var(--cl-1);
+    height: 5px;
+    width: var(--value);
+}
+#ts-title:hover::before {
+    --value: 100%;
+    transition: 0.25s;
+}
+
+/* Project section */
+#ps {
+    height: 100vh;
+    display: block;
+    background-color: var(--cl-wave-end);
+    padding: 3rem;
+}
+
+#ps-title > h1 {
+    margin: 0;
+}
+
+#ps-title {
+    width: 100%;
+    text-align: center;
+}
