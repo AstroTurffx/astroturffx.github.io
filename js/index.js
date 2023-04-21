@@ -1,3 +1,49 @@
+// Green sock
+gsap.registerPlugin(ScrollTrigger);
+
+// Title section animations
+const ts = gsap.timeline();
+const ts_ids = ["slot","scroll-text","p0","p1","p2","p3","p4","p5","p6","p7","p8","p9","b0","b1","b2","b3"];
+const ts_values = [0.6,2,0.81,0.72,0.63,0.54,0.45,0.36,0.27,0.18,0.09,0,-6,-4.5,-3,-1.5];
+
+ScrollTrigger.create({
+    trigger: "#all",
+    animation: ts,
+    scrub: true, // 3
+    start: 0, // header gets in the way :[
+    end: innerHeight * 1.5
+});
+
+for (let i = 0; i < ts_ids.length; i++) {
+    ts.to("#ts-"+ts_ids[i], { y: (ts_values[i] * innerHeight) }, 0);
+}
+
+// Project secion animations
+const create_trigger = (start, end, scrub, markers, pin) => {return{trigger:"#ps",start:start,end: end+" bottom",anticipatePin:pin!=null,scrub,pin,markers}};
+const create_timeline = (start, end, scrub, markers, pin) => {
+    let timeline = gsap.timeline();
+    let settings = create_trigger(start, end, scrub, markers, pin);
+    settings.animation = timeline;
+    ScrollTrigger.create(settings);
+    return timeline;
+}
+
+// Create the pin
+create_timeline("62.5px top", "bottom", true, false, "#ps-content");
+
+// 12.5% = 50vh | 43.75% = 175vh
+gsap.to("#ps", {
+    backgroundColor: "#740c9a",
+    scrollTrigger: create_trigger("12.5% center", "43.75%", true, false)
+})
+
+let ps = create_timeline("30% center", "43.75%", 1, false);
+ps.to("#ps-title > p", { opacity: 0 })
+ps.to("#ps-title-text", { color: "#ff218c", "--value": "100%" })
+
+let ps_content = create_timeline("43.75% center", "100%", 0.5, false)
+ps_content.to("#ps-content", { x: -innerWidth * 3, ease: "power1.inOut" })
+
 // Name thing
 const final = "Hey, I'm Kevin"
 const sym = "█▓░>/"
@@ -22,27 +68,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         iteration += 1 / 3;
     }, 20);
-
-    // Parallax
-    const images = document.getElementsByClassName("ts-parallax");
-    const blobs = document.getElementsByClassName("ts-blobs");
-    const slot = document.getElementById("ts-slot");
-    const scroll = document.getElementById("ts-scroll-text")
-
-    window.addEventListener('scroll', () => {
-        let value = window.scrollY;
-
-        slot.style.top = 0.6 * value + "px";
-        scroll.style.bottom = `calc(5vh - ${2*value}px`;
-
-        for (let i = 0; i < images.length; i++) {
-            const element = images.item(i);
-            element.style.top = 0.09 * (images.length - i - 1) * value + "px";
-        }
-
-        for (let i = 0; i < blobs.length; i++) {
-            const element = blobs.item(i);
-            element.style.top = `calc(125vh + ${-1.5 * (blobs.length - i) * value}px)`;
-        }
-    });
 });

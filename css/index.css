@@ -56,7 +56,7 @@ i:hover {
 #ts-scroll-text {
     z-index: 6;
     position: absolute;
-    left: 50%;
+    margin: 0 auto;
     bottom: 5vh;
     font-family: "futura_l";
     letter-spacing: 1px;
@@ -107,26 +107,50 @@ i:hover {
 #ts-magic {
     position: relative;
 
-    background: white;
-    transition: background 0.25s;
-
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+    transition: color 0.25s;
 }
 #ts-title:hover > #ts-magic {
-    animation: background-pan 3s linear infinite;
-
-    background: var(--cl-1);
-
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--cl-1);
 }
 #ts-title::before {
     --value: 0%;
+
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: calc(50% - calc(var(--value) / 2));
+
+    transition: 0.25s;
+    background: var(--cl-1);
+    height: 5px;
+    width: var(--value);
+}
+#ts-title:hover::before {
+    --value: 100%;
+    transition: 0.25s;
+}
+
+/* Project section */
+#ps {
+    height: 400vh;
+    display: block;
+    background-color: var(--cl-wave-end);
+    overflow-x: hidden;
+}
+
+#ps-title > h1 {
+    margin: 0;
+}
+#ps-title {
+    text-align: center;
+}
+#ps-title-text{
+    position: relative;
+    display: inline-block;
+    --value: 0%;
+}
+#ps-title-text::before {
 
     content: '';
     position: absolute;
@@ -138,24 +162,19 @@ i:hover {
     height: 5px;
     width: var(--value);
 }
-#ts-title:hover::before {
-    --value: 100%;
-    transition: 0.25s;
-}
-
-/* Project section */
-#ps {
+#ps-content{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 6;
+    position: relative;
+    width: 400%;
     height: 100vh;
-    display: block;
-    background-color: var(--cl-wave-end);
-    padding: 3rem;
 }
 
-#ps-title > h1 {
-    margin: 0;
-}
-
-#ps-title {
-    width: 100%;
-    text-align: center;
+#ps-content > img {
+    place-self: center;
 }
