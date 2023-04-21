@@ -42,7 +42,7 @@ ps.to("#ps-title > p", { opacity: 0 })
 ps.to("#ps-title-text", { color: "#ff218c", "--value": "100%" })
 
 let ps_content = create_timeline("43.75% center", "100%", 0.5, false)
-ps_content.to("#ps-content", { x: -innerWidth * 3, ease: "power1.inOut" })
+ps_content.to("#ps-content", { x: -innerWidth * 2, ease: "power1.inOut" })
 
 // Name thing
 const final = "Hey, I'm Kevin"
