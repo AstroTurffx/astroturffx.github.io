@@ -29,7 +29,7 @@ const create_timeline = (start, end, scrub, markers, pin) => {
 }
 
 // Create the pin
-create_timeline("top top", "bottom", true, true, "#ps-content");
+create_timeline("top top", "bottom", true, false, "#ps-content");
 
 // 12.5% = 50vh | 43.75% = 175vh
 gsap.to("#ps", {
