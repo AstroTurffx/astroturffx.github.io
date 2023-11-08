@@ -1,0 +1,41 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - min(15vw, 160px));
+    padding: 20px min(7.5vw, 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-weight: 700;
+        font-size: var(--fs-lg);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            list-style: none;
+            margin-left: 10px;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--cl-text);
+}
+.icon {
+    transform: scale(1);
+    transition: 0.25s;
+    &:hover {
+        transform: scale(1.2);
+        color: var(--cl-1);
+    }
+}

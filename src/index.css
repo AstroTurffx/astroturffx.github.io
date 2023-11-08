@@ -1,0 +1,55 @@
+/*
+    Palette:
+    #740c9a
+    #4e4ec4
+    #21b0ff
+    #aa52b4
+    #ff218c
+*/
+/*
+    --color-primary: #ff218c;
+    --color-secondary: #21b0ff;
+*/
+
+:root {
+    --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --fs-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --fs-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+    --cl-text: #fff;
+    --cl-1: #ff218c;
+    --cl-2: #740c9a;
+    --cl-3: #4e4ec4;
+    --cl-4: #21b0ff;
+    --cl-5: #aa52b4;
+    --cl-wave-end: #f700ff;
+
+    --cl-bg1: #740c9a;
+    --cl-bg2: #4e4ec4;
+}
+@font-face {
+    font-family: "futura_m";
+    src: url("../public/futura.ttf");
+}
+@font-face {
+    font-family: "futura_l";
+    src: url("../public/futura_light.ttf");
+}
+html{
+    font-family: "futura_m", serif;
+    font-size: var(--fs-base);
+    color: var(--cl-text);
+}
+
+h1 {
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    font-size: var(--fs-lg);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}

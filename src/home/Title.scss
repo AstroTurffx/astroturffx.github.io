@@ -1,0 +1,87 @@
+#ts {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-scroll-text {
+    z-index: 6;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 5vh;
+    font-family: "futura_l";
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &-slot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-title{
+    position: absolute;
+    font-size: var(--fs-xl);
+  }
+
+  &-magic {
+    position: relative;
+
+    color: white;
+    transition: color 0.25s;
+  }
+  &-title:hover > &-magic {
+    color: var(--cl-1);
+  }
+
+  &-title::before {
+    --value: 0%;
+
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: calc(50% - calc(var(--value) / 2));
+
+    transition: 0.25s;
+    background: var(--cl-1);
+    height: 5px;
+    width: var(--value);
+  }
+
+  &-title:hover::before {
+    --value: 100%;
+    transition: 0.25s;
+  }
+}
+
+.ts-parallax, .ts-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ts-parallax-front{
+  z-index: 5;
+}
+
+.ts-blobs{
+  object-fit: fill;
+  top: 125vh;
+  filter: drop-shadow(0 0 16px #aa52b4);
+}
+
